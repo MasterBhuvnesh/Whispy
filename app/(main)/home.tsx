@@ -12,7 +12,7 @@ const home = () => {
       }}
     >
       <Text style={{ fontFamily: "Regular" }}>
-        Template made by Bhuvnesh Verma{" "}
+        Template made by Bhuvnesh Verma
       </Text>
     </View>
   );
