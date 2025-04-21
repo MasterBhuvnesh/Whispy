@@ -1,0 +1,11 @@
+name: Hosting
+
+on:
+  push:
+    branches: ["host"]
+
+jobs:
+  my_job:
+    type: deploy
+    params:
+      prod: true
