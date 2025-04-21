@@ -1,6 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/clerk-expo";
 import { Link, Redirect } from "expo-router";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { SignOutButton } from "@/components/SignOutButton";
 import DiscordAuth from "@/components/sso/sso_discord";
 import GoogleAuth from "@/components/sso/sso_google";
@@ -26,8 +26,21 @@ export default function Page() {
           <GoogleAuth />
         </View>
         <Text style={{ marginTop: 10, fontFamily: "Regular" }}>
-          Auth using Clerk
+          Auth using Clerk - Bhuvnesh Verma
         </Text>
+        <Pressable
+          style={{
+            backgroundColor: "#000",
+            width: 100,
+            padding: 10,
+            borderRadius: 5,
+            marginTop: 10,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ color: "#fff", fontFamily: "Regular" }}>HLO - 😘</Text>
+        </Pressable>
       </SignedOut>
     </View>
   );
