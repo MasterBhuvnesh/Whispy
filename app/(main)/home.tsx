@@ -11,7 +11,9 @@ const home = () => {
         backgroundColor: "#fff",
       }}
     >
-      <Text style={{ fontFamily: "Regular" }}>Home </Text>
+      <Text style={{ fontFamily: "Regular" }}>
+        Template made by Bhuvnesh Verma{" "}
+      </Text>
     </View>
   );
 };

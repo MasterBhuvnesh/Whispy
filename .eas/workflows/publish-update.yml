@@ -11,3 +11,11 @@ jobs:
     params:
       branch: ${{ github.ref_name || 'test'}}
       message: ${{ github.event.head_commit.message }}
+
+  deploy:
+  name: Deploy
+  type: deploy
+  params:
+    branch: ${{ github.ref_name || 'test'}}
+    message: ${{ github.event.head_commit.message }}
+    prod: true
