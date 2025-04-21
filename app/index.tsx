@@ -13,8 +13,21 @@ export default function Page() {
         <SignOutButton />
       </SignedIn>
       <SignedOut>
-        <DiscordAuth />
-        <GoogleAuth />
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 10,
+            marginVertical: 5,
+          }}
+        >
+          <DiscordAuth />
+          <GoogleAuth />
+        </View>
+        <Text style={{ marginTop: 10, fontFamily: "Regular" }}>
+          Auth using Clerk
+        </Text>
       </SignedOut>
     </View>
   );

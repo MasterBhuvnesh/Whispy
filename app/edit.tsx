@@ -152,8 +152,10 @@ export default function EditProfileScreen() {
     <View style={{ flex: 1, padding: 20, backgroundColor: "#fff" }}>
       <Stack.Screen
         options={{
-          title: "Edit Profile",
+          title: "",
           headerTitleStyle: { fontFamily: "Regular" },
+          headerShadowVisible: false,
+          headerStyle: { backgroundColor: "#fff" },
         }}
       />
       <View style={{ alignItems: "center", marginBottom: 20 }}>
@@ -170,35 +172,57 @@ export default function EditProfileScreen() {
             marginBottom: 10,
           }}
         />
-        <Pressable
-          onPress={handleImagePicker}
-          disabled={uploading || isLoading}
+        <View
           style={{
-            padding: 10,
-            backgroundColor: "#000",
-            borderRadius: 5,
-            marginBottom: 10,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            width: "80%",
           }}
         >
-          <Text style={{ color: "#fff", fontFamily: "Regular" }}>
-            Change Photo
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={handleGifPicker}
-          disabled={uploading || isLoading}
-          style={{
-            padding: 10,
-            borderWidth: 1,
-            borderColor: "#000",
-            borderRadius: 5,
-          }}
-        >
-          <Text style={{ color: "#000", fontFamily: "Regular" }}>
-            Upload GIF
-          </Text>
-        </Pressable>
-        {(uploading || isLoading) && <ActivityIndicator size="small" />}
+          <Pressable
+            onPress={handleImagePicker}
+            disabled={uploading || isLoading}
+            style={{
+              flex: 1,
+              padding: 10,
+              backgroundColor: "#000",
+              borderRadius: 5,
+              marginRight: 5,
+            }}
+          >
+            <Text
+              style={{
+                color: "#fff",
+                fontFamily: "Regular",
+                textAlign: "center",
+              }}
+            >
+              Change Photo
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={handleGifPicker}
+            disabled={uploading || isLoading}
+            style={{
+              flex: 1,
+              padding: 10,
+              borderWidth: 1,
+              borderColor: "#000",
+              borderRadius: 5,
+              marginLeft: 5,
+            }}
+          >
+            <Text
+              style={{
+                color: "#000",
+                fontFamily: "Regular",
+                textAlign: "center",
+              }}
+            >
+              Upload GIF
+            </Text>
+          </Pressable>
+        </View>
       </View>
 
       <TextInput

@@ -102,9 +102,7 @@ export default function DiscordAuth() {
           size={18}
           color="black"
         />
-        <Text
-          style={{ marginLeft: 10, fontFamily: "Poppins_Bold", fontSize: 12 }}
-        >
+        <Text style={{ marginLeft: 10, fontFamily: "Regular", fontSize: 16 }}>
           Discord
         </Text>
       </TouchableOpacity>

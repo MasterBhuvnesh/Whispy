@@ -101,9 +101,7 @@ export default function GoogleAuth() {
           size={18}
           color="black"
         />
-        <Text
-          style={{ marginLeft: 10, fontFamily: "Poppins_Bold", fontSize: 12 }}
-        >
+        <Text style={{ marginLeft: 10, fontFamily: "Regular", fontSize: 16 }}>
           Google
         </Text>
       </TouchableOpacity>

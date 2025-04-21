@@ -11,8 +11,8 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    Bold: require("@/assets/fonts/Product Sans Bold.ttf"),
-    Regular: require("@/assets/fonts/Product Sans Regular.ttf"),
+    Bold: require("@/assets/fonts/ProductSansBold.ttf"),
+    Regular: require("@/assets/fonts/ProductSansRegular.ttf"),
   });
 
   useEffect(() => {
