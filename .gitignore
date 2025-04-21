@@ -37,4 +37,3 @@ yarn-error.*
 
 # Credential files
 credentials.json
-apk-build.yml
