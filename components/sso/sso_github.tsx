@@ -31,7 +31,7 @@ if (Platform.OS !== "web") {
   WebBrowser.maybeCompleteAuthSession();
 }
 
-export default function DiscordAuth() {
+export default function GithubAuth() {
   useWarmUpBrowser();
 
   // Use the `useSSO()` hook to access the `startSSOFlow()` method
@@ -42,12 +42,9 @@ export default function DiscordAuth() {
       // Start the authentication process by calling `startSSOFlow()`
       const { createdSessionId, setActive, signIn, signUp } =
         await startSSOFlow({
-          strategy: "oauth_discord",
+          strategy: "oauth_github",
           // Defaults to current path
-          redirectUrl: AuthSession.makeRedirectUri({
-            scheme: "whispy",
-            host: "oauthredirect",
-          }),
+          redirectUrl: AuthSession.makeRedirectUri(),
         });
 
       // If sign in was successful, set the active session
@@ -101,12 +98,12 @@ export default function DiscordAuth() {
         style={{ flexDirection: "row", alignItems: "center" }}
       >
         <FontAwesome5
-          name="discord"
+          name="github"
           size={18}
           color="black"
         />
         <Text style={{ marginLeft: 10, fontFamily: "Regular", fontSize: 16 }}>
-          Discord
+          Github
         </Text>
       </TouchableOpacity>
     </View>

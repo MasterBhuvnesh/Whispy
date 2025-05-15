@@ -4,7 +4,7 @@ import { Pressable, Text, View } from "react-native";
 import { SignOutButton } from "@/components/SignOutButton";
 import DiscordAuth from "@/components/sso/sso_discord";
 import GoogleAuth from "@/components/sso/sso_google";
-
+import GithubAuth from "@/components/sso/sso_github";
 export default function Page() {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -22,6 +22,7 @@ export default function Page() {
             marginVertical: 5,
           }}
         >
+          <GithubAuth />
           <DiscordAuth />
           <GoogleAuth />
         </View>
@@ -31,15 +32,17 @@ export default function Page() {
         <Pressable
           style={{
             backgroundColor: "#000",
-            width: 100,
+            width: 300,
             padding: 10,
             borderRadius: 5,
-            marginTop: 10,
+            marginTop: 30,
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <Text style={{ color: "#fff", fontFamily: "Regular" }}>HLO - 😘</Text>
+          <Text style={{ color: "#fff", fontFamily: "Regular" }}>
+            Wanna Eat Ice-cream 👀
+          </Text>
         </Pressable>
       </SignedOut>
     </View>
