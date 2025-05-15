@@ -45,7 +45,7 @@ export default function DiscordAuth() {
           strategy: "oauth_discord",
           // Defaults to current path
           redirectUrl: AuthSession.makeRedirectUri({
-            scheme: "whispy",
+            scheme: "myapp",
             path: "/",
           }),
         });
