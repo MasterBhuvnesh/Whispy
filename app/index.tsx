@@ -41,7 +41,7 @@ export default function Page() {
           }}
         >
           <Text style={{ color: "#fff", fontFamily: "Regular" }}>
-            15 May 7:51 PM
+            15 May 8:00 PM
           </Text>
         </Pressable>
       </SignedOut>
