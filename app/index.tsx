@@ -41,7 +41,7 @@ export default function Page() {
           }}
         >
           <Text style={{ color: "#fff", fontFamily: "Regular" }}>
-            Wanna Eat Ice-cream 👀
+            15 May 7:51 PM
           </Text>
         </Pressable>
       </SignedOut>

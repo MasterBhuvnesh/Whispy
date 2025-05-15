@@ -20,19 +20,6 @@
       "associatedDomains": [
         "applinks:clever-dodo-67.clerk.accounts.dev",
         "webcredentials:clever-dodo-67.clerk.accounts.dev"
-      ],
-      "intentFilters": [
-        {
-          "action": "VIEW",
-          "data": [
-            {
-              "scheme": "https",
-              "host": "clever-dodo-67.clerk.accounts.dev",
-              "pathPrefix": "/"
-            }
-          ],
-          "category": ["BROWSABLE", "DEFAULT"]
-        }
       ]
     },
     "web": {
