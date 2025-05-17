@@ -4,7 +4,6 @@ import * as AuthSession from "expo-auth-session";
 import { useSSO } from "@clerk/clerk-expo";
 import {
   View,
-  Button,
   Alert,
   TouchableOpacity,
   Text,
@@ -44,7 +43,10 @@ export default function GithubAuth() {
         await startSSOFlow({
           strategy: "oauth_github",
           // Defaults to current path
-          redirectUrl: AuthSession.makeRedirectUri(),
+         redirectUrl: AuthSession.makeRedirectUri({
+                    scheme: "myapp",
+                    path: "/",
+                  }),
         });
 
       // If sign in was successful, set the active session
@@ -58,6 +60,7 @@ export default function GithubAuth() {
 
         // Example: Check if additional sign-in steps are required
         if (signIn) {
+          
           // Handle additional sign-in steps (e.g., MFA)
           Alert.alert(
             "Additional Steps Required",
